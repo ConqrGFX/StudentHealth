@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/main.css"
+    <!--===============================================================================================-->
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-j9JlLYBbq9irC98EOIyo1/fj6bL3qgkzxK0t24Cy2rqOWxgM6VJddUvznr/Jw5OV4QeO8tZowAPcJ87drMyD6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--===============================================================================================-->
+    <script src="https://kit.fontawesome.com/6accec798f.js" crossorigin="anonymous"></script>
+    <!--===============================================================================================-->
+
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+                <a class="home-icon" href="index.html">
+                    <i class="fas fa-arrow-left" style="color: #333333; font-size: 30px;"></i>
+                </a>
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-26">
+                        Register
+                    </span>
+                    <span class="login100-form-title p-b-48">
+                        <i class="fas fa-face-grin-squint"></i>
+                    </span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                        <input class="input100" type="text" name="name">
+                        <span class="focus-input100" data-placeholder="Name"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                        <input class="input100" type="text" name="email">
+                        <span class="focus-input100" data-placeholder="Email"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please enter your date of birth">
+                        <input class="input100" type="text" name="dob" id="dobInput">
+                        <span class="focus-input100" data-placeholder="Date of Birth"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <span class="btn-show-pass">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <input class="input100" type="password" name="password">
+                        <span class="focus-input100" data-placeholder="Password"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Please re-enter password">
+                        <span class="btn-show-pass">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                        <input class="input100" type="password" name="confirm-password">
+                        <span class="focus-input100" data-placeholder="Re-Enter Password"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center p-t-40">
+                        <span class="txt1">
+                            Already have an account?
+                        </span>
+                        <a class="txt2" href="login.html">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+
+    <script>
+        $(document).ready(function () {
+            $('.datepicker-input').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                minYear: 1900,
+                maxYear: parseInt(moment().format('YYYY'), 10)
+            });
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#dobInput", {
+                dateFormat: "d/m/Y",  // Specify the desired date format
+                theme: "material_green",  // Specify the desired theme
+                disableMobile: false  // Disable the mobile-friendly version
+            });
+        });
+    </script>
+
+</body>
+</html>

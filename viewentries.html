@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Journal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-j9JlLYBbq9irC98EOIyo1/fj6bL3qgkzxK0t24Cy2rqOWxgM6VJddUvznr/Jw5OV4QeO8tZowAPcJ87drMyD6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/6accec798f.js" crossorigin="anonymous"></script>
+    <!--===============================================================================================-->
+
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+                <a class="go-back" onclick="goBack()">
+                    <i class="fa-solid fa-arrow-left" style="color: #333333; font-size: 30px;"></i>
+                </a>
+                <a class="home-icon" href="homepage.html">
+                    <i class="fa-solid fa-house" style="color: #333333; font-size: 27px; padding-left:219px"></i>
+                </a>
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-26" style="font-size: 38px; text-align: left;">
+                        Your Journal
+                    </span>
+
+                    <span class="login100-form-title p-b-48">
+                        <div id="journalContent" class="journal-content">
+                            <style>
+                                .journal-date {
+                                    font-size: 24px;
+                                }
+                            </style>
+
+                            <div class="journal-entry">
+                                <span class="journal-date">May 16, 2023 10:30 AM</span>
+                                <h5>Entry 1</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nunc a metus vehicula fermentum. In rhoncus lorem vitae eros sagittis, ut commodo quam aliquam.</p>
+
+                            </div>
+                            <div class="journal-entry">
+                                <span class="journal-date">May 15, 2023 3:45 PM</span>
+                                <h5>Entry 2</h5>
+                                <p>Nullam aliquam diam quis lacus interdum auctor. Fusce vulputate velit vitae dolor vulputate viverra. Quisque dapibus semper tortor.</p>
+
+                            </div>
+                        </div>
+                    </span>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" id="addEntryBtn">
+                                Add Entry
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script>
+        $("#addEntryBtn").click(function () {
+            window.location.href = "addentry.html";
+        });
+    </script>
+
+</body>
+</html>

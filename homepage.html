@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Good Morning Student</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-j9JlLYBbq9irC98EOIyo1/fj6bL3qgkzxK0t24Cy2rqOWxgM6VJddUvznr/Jw5OV4QeO8tZowAPcJ87drMyD6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/6accec798f.js" crossorigin="anonymous"></script>
+    <!--===============================================================================================-->
+
+
+
+
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100" style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">
+                <a class="home-icon" href="index.html">
+                    <i class="fa fa-sign-out" style="color: #333333; font-size: 24px;"></i>
+                </a>
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-26" style="font-size: 38px; text-align: left;">
+                        Good Morning Student
+                    </span>
+
+                    <span class="login100-form-title p-b-48">
+                        <div id="weatherWidget" class="weather-widget"></div>
+                    </span>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" id="howAreYouTodayBtn">
+                                How are you today?
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" id="journalBtn">
+                                Your Journal
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn" id="speakBtn">
+                                Speak to someone
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Faux Weather Widget
+        $(document).ready(function () {
+            var weatherIcons = ["fas fa-cloud-showers-heavy", "fas fa-cloud-sun-rain", "fas fa-smog", "fas fa-cloud-bolt", "fas fa-snowflake", "fas fa-cloud", "fas fa-moon", "fas fa-sun"];
+            /*var weatherIcons = ["fa-cloud", "fa-bolt", "fa-sun-o", "fa-moon-o", "fas fa-snowflake-o"];*/
+            //fa-sun", "fa-cloud", "fa-cloud-sun", "fa-cloud-moon", "fa-bolt", "fas fa-cloud-moon-rain", "fas fa-cloud-showers-heavy", "fas fa-smog", "fas fa-cloud-sun-rain", "fas fa-cloud-sun
+            var minTemperature = -5;  // Minimum temperature in Celsius
+            var maxTemperature = 30; // Maximum temperature in Celsius
+
+            var randomIndex = Math.floor(Math.random() * weatherIcons.length);
+            var randomIcon = weatherIcons[randomIndex];
+            var randomTemperature = Math.floor(Math.random() * (maxTemperature - minTemperature + 1)) + minTemperature;
+
+            $("#weatherWidget").html(`
+              <h2>Weather</h2>
+              <div class="weather-icon">
+                <i id="weatherIcon" class="fa ${randomIcon}"></i>
+              </div>
+              <div class="temperature">
+                <span id="randomTemperature">${randomTemperature}</span>°C
+              </div>
+            `);
+        });
+    </script>
+
+
+
+    <script>
+
+        $("#journalBtn").click(function () {
+            window.location.href = "yourjournal.html";
+        });
+
+        $("#howAreYouTodayBtn").click(function () {
+            window.location.href = "howareyoutoday.html";
+        });
+
+        $("#speakBtn").click(function () {
+            window.location.href = "speaktosomeone.html";
+        });
+
+    </script>
+
+</body>
+</html>
